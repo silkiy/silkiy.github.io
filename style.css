@@ -25,10 +25,10 @@ body {
 
 #profilePicture, #profilePicture img {
     position: relative;
-    width: 162px;
-    height: 162px;
+    max-width: 10%;
+    max-width: 10%;
     display: block;
-    margin: 40px auto 20px;
+    margin: 40px auto;
     border-radius: 50%;
     -webkit-tap-highlight-color: transparent;
 }
