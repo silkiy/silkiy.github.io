@@ -1,0 +1,139 @@
+:root {
+    --bgColor: #1a2a43;
+    --bgColor2: #0d0f1a;
+    --textColor: #ffffff;
+    --accentColor: #ffd700;
+    --font: 'Karla', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: var(--font);
+    background: radial-gradient(circle at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+/* Efek Background Bergerak */
+@keyframes bgMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+}
+
+body {
+    background-size: 300% 300%;
+    animation: bgMove 30s linear infinite alternate;
+}
+
+/* Efek Teks */
+.eid-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--textColor);
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.6), 0 0 20px rgba(255, 255, 0, 0.3);
+    animation: colorChange 8s infinite alternate ease-in-out;
+}
+
+/* Garis Dekoratif */
+.decorative-line {
+    width: 60%;
+    height: 4px;
+    background: var(--accentColor);
+    margin: 15px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--accentColor);
+}
+
+/* Ucapan Idul Fitri */
+.eid-message {
+    font-size: 1.2rem;
+    color: var(--textColor);
+    max-width: 600px;
+    padding: 10px;
+    opacity: 0.9;
+}
+
+/* Tombol Interaktif */
+.share-button {
+    background: var(--accentColor);
+    color: var(--bgColor2);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.share-button:hover {
+    background: #ffcc00;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Efek Siluet Masjid */
+.mosque {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: url('mosque-silhouette.png') bottom center / cover no-repeat;
+    opacity: 0.3;
+}
+
+/* Efek Bintang */
+#stars1, #stars2, #stars3 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: white;
+    opacity: 0.8;
+}
+
+#stars1 {
+    box-shadow: 40px 80px white, 180px 250px white, 360px 400px white, 540px 620px white;
+    animation: moveStars 100s linear infinite, twinkle 4s infinite alternate ease-in-out;
+}
+
+#stars2 {
+    box-shadow: 90px 40px white, 270px 160px white, 450px 320px white, 630px 500px white;
+    animation: moveStars 75s linear infinite, twinkle 3.5s infinite alternate ease-in-out;
+}
+
+#stars3 {
+    box-shadow: 130px 200px white, 310px 380px white, 490px 540px white, 670px 700px white;
+    animation: moveStars 50s linear infinite, twinkle 3s infinite alternate ease-in-out;
+}
+
+/* Animasi Warna */
+@keyframes colorChange {
+    0% { color: #ffd700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
+    25% { color: #7fffd4; text-shadow: 0 0 10px rgba(127, 255, 212, 0.6); }
+    50% { color: #87cefa; text-shadow: 0 0 10px rgba(135, 206, 250, 0.6); }
+    75% { color: #dda0dd; text-shadow: 0 0 10px rgba(221, 160, 221, 0.6); }
+    100% { color: #ffd700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+}
